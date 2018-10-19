@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+    <style>
+        .caja {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            background: #226fc1;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            font-family: Arial;
+        }
+            
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+    <button onclick="saludo()">Saludo con modelo basico de eventos</button>
+    <button id="btn-saludar">Saludo con modelo estandar de eventos</button>
+    -->
+    
+    <button id="btn-caja">Crear Caja</button>
+    <section id="contenedor"></section>
+
+
+    <script>
+
+        /* Existen 3 modelos de eventos diferentes:
+            - Modelo basico de eventos.
+                Características limitadas.
+                Funciona en todos los navegadores
+
+            - Modelo de eventos estandar.
+                Mayor funcionalidad
+                Todos los navegadores lo soportan
+
+                Versiones anteriores de Internet Explorer como IE7 no lo soportan
+
+            - Modelo de eventos de Internet Explorer.
+                Modelo creado por Microsoft exclusivamente para IE
+        */
+
+
+/*
+        function saludo () {
+            alert('Hola');
+        }
+
+        function saludo2() {
+            alert('Hola 2');
+            
+        }
+
+        var btnsaludar = document.getElementById('btn-saludar');
+        btnsaludar.addEventListener('click', saludo);
+        btnsaludar.addEventListener('click', saludo2);
+
+        btnsaludar.removeEventListener('click',saludo);
+
+        // Aquí mostramos un evento con una función anonima también llamadas
+        // FALLBACKS en el que el usuario cuando haga click en el boton invocara el codigo que nosotros queramos
+        btnsaludar.addEventListener('click', function(){
+            // Codigo
+        });
+
+*/   
+
+        function crearCaja() {
+            var contenedor = document.getElementById('contenedor');
+            var caja = document.createElement('div');
+            caja.className = 'caja';
+            contenedor.appendChild(caja);
+        }
+
+        var btnCaja = document.getElementById('btn-caja');
+        btnCaja.addEventListener('click', crearCaja)
+
+
+        /* Algunos de los eventos más usados son:
+            click
+            focus
+            blur
+            change
+            onload
+            mouseover
+            mouseout
+            resize
+            submit
+        */
+
+        
+    </script>
+    
+</body>
+</html>
