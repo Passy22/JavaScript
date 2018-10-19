@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Break y Continue</title>
+</head>
+<body>
+
+    <script>
+
+        var amigos = ['Alvaro','Mikel','Alejandro','Foo'];
+
+        for (amigo in amigos){
+            // Con esta estructura lo que hacemos es saltarnos la ejecución. Mostaría en pantalla
+            // Alvaro, Alejandro, Foo
+            if(amigos[amigo] == 'Mikel'){
+                continue;
+            }
+            document.write(amigos[amigo] + '<br>');
+
+            // Comando break que nos para la ejecucion del bucle
+            //if(amigos[amigo] == 'Mikel'){
+            //    break;
+            //}
+        }
+
+        console.log('Fin del ciclo');
+    
+    
+    </script>
+    
+</body>
+</html>

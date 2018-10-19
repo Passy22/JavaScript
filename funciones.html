@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones</title>
+</head>
+<body>
+
+
+    <script>
+
+        // Veremos como esto lo podemos convertir en una funcion para que sea más optimo
+        //var numero1 = 10;
+        //var numero2 = 5;
+        //var resultado = numero1 + numero2;
+        //document.write(resultado);
+        
+        // Una función se define de la siguiente manera
+        function mifunction () {
+
+        }
+
+        function suma (numero1, numero2){
+            //document.write(numero1 + numero2);
+            //document.write('<br>');
+            return numero1 + numero2;
+        }
+
+        document.write(suma(10,5));
+        suma(3,2);
+
+        // También podemos guardar el return de una funcion en una variable
+        var operacion = function(numero1, numero2){
+            return numero1 + numero2;
+        }
+
+        document.write(operacion(8,7));
+
+        // Funciones Autoinvocadas. Se ejecuta sin necesidad de llamarla explicitamente. Se utiliza
+        // para que tu funcion use tus propias variables y proteger codigo impidiendo que otro plugin pueda hacer uso
+        // de nuestras variables
+        (function(){
+            alert('Hola Mundo');
+        }());
+    
+    </script>
+    
+</body>
+</html>
