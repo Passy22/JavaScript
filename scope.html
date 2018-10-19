@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scope de JavaScript</title>
+</head>
+<body>
+
+    <script>
+    
+    // Hay dos tipos de variables. Locales y Globales
+    // Variables Locales que estan creadas dentro de una función y solo puede ser accedidas
+    // a través de ellas.
+
+    function saludo() {
+        var texto = 'Hola Mundo';
+        console.log(texto);
+    }
+    saludo();
+    //saludo();
+    //console.log(texto); // Va a dar error porque su scope está dentro de la función saludo y no dentro
+
+    // Funciones Anidadas
+    function saludoouter(){
+        var texto = 'Hola Mundo';
+
+        function mensaje(){
+            var texto = 'Modificado';
+            console.log(texto);
+        }
+        mensaje();
+    }
+    saludoouter();
+
+    /*
+    Las reglas para los scopes serian las siguientes aquí descritas:
+
+    El scope funciona por niveles, sino encuentra una variable en el mismo nivel subirá de nivel hacia afuera y buscará.
+    Sino encuentra subirá otro nivel y así sucesivamente
+
+    Si tenemos una función anidada ( una función dentro de otra) podemos buscar variables desde dentro hacia afuera,
+    pero desde una función no podemos buscar variables hacia dentro de otra función. Podemos decir que una función más "exterior"
+    no ve las variables que tengamos definidas en una función anidada en ella.
+    */
+
+    // Variables Globales. Son aquellas que se puede acceder desde cualquier lugar o cualquier funcion
+
+    var global = 'Hola Mundo';
+
+    function funcionGlobal () {
+        console.log(global);
+
+        global = 'Hola Mundo, modificado';
+        console.log(global);
+    }
+
+    // También podemos hacer una Variable Global dentro de una funcion. Se haría de la siguiente manera
+
+    function variableGlobal (){
+        mensajeGlobal = 'Hola Mundo';
+    }
+
+    funcionGlobal();
+    variableGlobal();
+    console.log('Variable mensajeGlobal fuera de mi metodo' + ' ' + mensajeGlobal);
+
+    // De esta manera podemos proteger como ya habíamos visto anteriormente dentro de una función autoinvocada
+
+    (function(){
+        alert('Funcion autoinvocada');
+    }())
+
+
+    </script>
+    
+</body>
+</html>
