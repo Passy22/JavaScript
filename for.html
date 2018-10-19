@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ciclo For</title>
+</head>
+<body>
+
+    <script>
+        // Ciclo del 1 al 10
+        for(var i = 0; i<10; i++) {
+            document.write('<br>' + i);
+        }
+
+        for(var i=10; i>=1; i--){
+            document.write('<br>' + i);
+        }
+
+        var meses = ['Enero','Febrero','Marzo',
+                    'Abril','Mayo','Junio',
+                    'Julio','Agosto','Septiembre',
+                    'Octubre','Noviembre','Diciembre'];
+
+        for (var i=0; i<meses.length; i++){
+            document.write('<br>' + (i + 1) + '.-' + meses[i]);
+        }
+
+        for (mes in meses){
+            document.write('<br>' + (parseInt(mes) + 1) + '.-' + meses[mes]);
+        }
+        
+    </script>
+    
+</body>
+</html>
