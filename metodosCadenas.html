@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodos y propiedades para cadenas de Texto</title>
+</head>
+<body>
+
+    <script>
+
+        var nombre = 'Alvaro Soriano';
+        var numeroCaracteres = nombre.length;
+        console.log('Numero  Caracteres: ' + numeroCaracteres);
+        console.log(nombre + ' tiene ' + numeroCaracteres + ' caracteres');
+        var segundoNombre = nombre.substring(7,14);
+        console.log('Apellido: ' + segundoNombre);
+
+        var segundoNombre2 = nombre.substr(7,7);
+        console.log('Apellido: ' + segundoNombre2);
+
+        var nuevoNombre = nombre.replace('Alvaro', 'Mikel');
+        console.log('Nuevo Nombre: ' + nuevoNombre);
+
+        nombre = nombre.toUpperCase();
+        console.log('Nombre en mayuscula: ' + nombre);
+
+        nombre = nombre.toLowerCase();
+        console.log('Nombre en minuscula: ' + nombre);
+
+        var posicion = nombre.indexOf('o');
+        console.log('Primera posicion de "o": ' + posicion);
+
+        var posicionfinal = nombre.lastIndexOf('o');
+        console.log('Ultima posicion de "o": ' + posicionfinal);
+    
+    </script>
+    
+</body>
+</html>
