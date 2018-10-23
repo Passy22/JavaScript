@@ -18,6 +18,22 @@ body {
   padding: 20px;
   background: #ffffff;
   border-radius: 6px 6px 0 0; }
+.formulario .contenedor-inputs-nombre span {
+  max-width: 15px;
+  font-size: 15px;
+  color: red; }
+.formulario .contenedor-inputs-correo span {
+  max-width: 15px;
+  font-size: 15px;
+  color: red; }
+.formulario .contenedor-inputs-sexo span {
+  max-width: 15px;
+  font-size: 15px;
+  color: red; }
+.formulario .contenedor-inputs-terminos span {
+  max-width: 15px;
+  font-size: 15px;
+  color: red; }
 .formulario input[type="email"] {
   display: block;
   width: 100%;

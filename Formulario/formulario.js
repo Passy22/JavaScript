@@ -1,5 +1,9 @@
 // Lo vamos a hacer con una función autoinvocada para proteger nuestro codigo
 
+// Aquí una posible mejora es intentar que dentro del span que ya tenemos definido en la hoja de estilo
+// metemos los errores que se hayan dado en el formulario creando el elemento a partir del dom sin 
+// inyectar html a pelo
+
 (function(){
 
 var formulario = document.getElementById('formulario'),
@@ -12,6 +16,7 @@ var salida = '';
 
 function validarNombre(e){
     if(nombre.value == '' || nombre.value == null) {
+        
         salida += '<li>Complete nombre</li>';
     }
 }
