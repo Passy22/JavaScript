@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos de Tiempo</title>
+</head>
+<body>
+    <button id="btn-iniciar">Iniciar</button>
+    <button id="btn-detener">Detener</button>
+
+    <script>
+        function saludo() {
+            alert('Hola Mundo');
+        }
+
+        // Aquí tenemos un fragmento de codigo que lo que hace es mostrar un alert a los 3 segundos
+        //document.getElementById('btn-iniciar').addEventListener('click', function(){
+        //    setTimeout(saludo, 3000);
+        //});
+
+        // También podemos cancelar el timeout de la siguiente manera
+        var tiempo = setTimeout(saludo, 3000);
+        clearTimeout(tiempo); // Cogemos el id de la variable de tiempo que queremos anular
+
+        // Ahora vemos como funcionan los intervalos
+        var intervalo = setInterval(saludo, 3000);
+        document.getElementById('btn-detener').addEventListener('click',function(){
+            clearInterval(intervalo);
+        });
+        
+    </script>
+    
+</body>
+</html>
